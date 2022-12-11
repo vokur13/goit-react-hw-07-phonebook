@@ -41,6 +41,11 @@ export const App = () => {
   }
 
   function onFilterChange([value]) {
+    // if (value && value.length > 0) {
+    //   dispatch(contactsSlice.findContact(value));
+    // } else if (!value) {
+    //   dispatch(contactsSlice.findContact((value = '')));
+    // }
     !value
       ? dispatch(contactsSlice.findContact((value = '')))
       : dispatch(contactsSlice.findContact(value));
